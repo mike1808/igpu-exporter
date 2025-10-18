@@ -23,8 +23,8 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflag
 FROM ubuntu:22.04
 
 # Install intel-gpu-tools
-RUN apt-get update
-RUN apt-get install -y intel-gpu-tools && \
+RUN apt-get update && \
+    apt-get install -y intel-gpu-tools && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
