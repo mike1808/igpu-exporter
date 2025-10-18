@@ -1,0 +1,2 @@
+git config --global --add safe.directory /mnt/tower/appdata/dockge/stacks/grafana/igpu_exporter
+
