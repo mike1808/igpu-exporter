@@ -20,7 +20,7 @@ COPY . ./
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o igpu-exporter ./cmd
 
 # Runtime stage
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 # Install intel-gpu-tools
 RUN apt-get update && \
