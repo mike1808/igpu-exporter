@@ -1,4 +1,4 @@
-# Intel GPU Prometheus Exporter
+# Intel GPU Exporter
 
 A Prometheus exporter for Intel GPU metrics using `intel_gpu_top`. This exporter provides detailed metrics about Intel integrated GPU usage, including engine utilization, memory bandwidth, power consumption, and per-process GPU usage.
 
@@ -126,6 +126,22 @@ scrape_configs:
     static_configs:
       - targets: ['intel-gpu-exporter:8080']
 ```
+
+## Grafana Dashboard
+
+A pre-built Grafana dashboard is available in [`examples/dashboard.json`](examples/dashboard.json). This dashboard includes:
+
+- GPU engine utilization over time
+- Memory bandwidth graphs
+- Power consumption tracking
+- Per-process GPU memory usage
+- Frequency and temperature monitoring
+
+To import:
+1. Open Grafana
+2. Go to Dashboards → Import
+3. Upload `examples/dashboard.json`
+4. Select your Prometheus data source
 
 ## Example Queries
 
