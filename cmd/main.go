@@ -218,10 +218,11 @@ func main() {
 	metrics := newMetrics()
 
 	port := getEnv("PORT", "8080")
+	listenAddr := os.Getenv("LISTEN_ADDR")
 
 	http.Handle("/metrics", promhttp.Handler())
 	go func() {
-		addr := ":" + port
+		addr := listenAddr + ":" + port
 		log.Printf("Starting HTTP server on %s", addr)
 		if err := http.ListenAndServe(addr, nil); err != nil {
 			log.Fatal(err)

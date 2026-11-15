@@ -79,6 +79,7 @@ go build -o igpu-exporter
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `PORT` | HTTP server port for metrics endpoint | `8080` |
+| `LISTEN_ADDR` | Bind address for the metrics endpoint (`127.0.0.1` to serve localhost only) | (all interfaces) |
 | `REFRESH_PERIOD_MS` | Metrics refresh period in milliseconds | `10000` |
 | `DEVICE` | Specific Intel GPU device to monitor | (auto-detect) |
 | `DEBUG` | Enable debug logging (`true` or `1`) | `false` |
